@@ -95,6 +95,7 @@ def main():
         print("Device latitude: {}".format(device.latitude))
         print("Device longitude: {}\n".format(device.longitude))
 
+    # Shortcut if you only want devices
     need_events = args.events or args.urls or args.download_all
     if (not need_events):
       return
@@ -134,7 +135,7 @@ def main():
           url = device.recording_url(recording_id)
           print(url)
 
-    # Download all device urls
+    # Download all recording urls
     if args.download_all:
       print("\tDownloading all videos linked on your Ring account.\n" +
             "\tThis may take some time....\n")
